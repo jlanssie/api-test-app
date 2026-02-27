@@ -1,14 +1,24 @@
-# Template
+# API Test App
 
-A repository template for creating new projects.
+A Node.js app to test APIs.
 
 ## Installation
 
-This is a template repository and cannot be installed.
+Install with NPM. 
+
+```shell
+npm i
+```
 
 ## Usage
 
-Select this repository as a template when creating a new GitHub repository.
+Run with NPM.
+
+```shell
+npm run start
+```
+
+Adapt configurations and data in **data.json** and **config.json**.
 
 ## Contributing
 
