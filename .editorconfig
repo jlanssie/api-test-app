@@ -1,0 +1,36 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{ps1,psm1,psd1}]
+indent_size = 4
+end_of_line = crlf
+cpp_set_brace_wrapping_before_else = false
+
+[{*.java,*.html,*.xml}]
+indent_size = 4
+max_line_length = 200
+
+[{*.js,*.ts,*.jsx,*.tsx,*.json,*.scss,*.css,*.svelte}]
+max_line_length = 125
+
+[*.sql]
+max_line_length = 80
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+[*.rs]
+indent_size = 4
+insert_final_newline = true
