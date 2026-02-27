@@ -16,7 +16,7 @@
   "requests": [
     {},
     {
-      "segment": "/test"
+      "method": "POST"
     }
   ]
 }
