@@ -4,7 +4,7 @@ A Node.js app to test APIs.
 
 ## Installation
 
-Install with NPM. 
+Install with NPM.
 
 ```shell
 npm i
