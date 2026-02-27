@@ -1,8 +1,0 @@
-{
-  "log": {
-    "verbose": false
-  },
-  "security": {
-    "insecure": true
-  }
-}
