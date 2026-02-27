@@ -98,6 +98,12 @@ yarn-error.log*
 *.key
 *.crt
 
+# Settings
+config.json
+!config.example.json
+data.json
+!data.example.json
+
 # ==========================================
 # 6. PACKAGE MANAGERS (Optional Customizations)
 # ==========================================
