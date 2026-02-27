@@ -6,10 +6,15 @@ if (config.security.insecure) {
   process.removeAllListeners('warning');
 }
 
+let successes = 0;
+let failures = 0;
+
 async function run() {
   const toObj = (val) => (val && typeof val === 'object' ? val : {});
 
   const verbose = config.log.verbose || false;
+
+  console.log('\n');
 
   for (const request of data.requests) {
     const requestConfig = {
@@ -23,7 +28,7 @@ async function run() {
     const url = new URL(requestConfig.segment, requestConfig.domain);
     Object.entries(requestConfig.queryParams || {}).forEach(([k, v]) => url.searchParams.append(k, v));
 
-    console.log(`📡 [${requestConfig.method}] ${url.href}`);
+    console.log(`[${requestConfig.method}] ${url.href}\n`);
 
     try {
       const hasBody = !['GET', 'HEAD'].includes(requestConfig.method.toUpperCase()) && Object.keys(requestConfig.payload).length > 0;
@@ -37,8 +42,10 @@ async function run() {
       }).then(async (response) => {
         if (response.ok) {
           console.log(`✅ ${response.status}`);
+          successes++;
         } else {
           console.error(`❌ ${response.status}`);
+          failures++;
         }
 
         if (verbose) {
@@ -57,8 +64,11 @@ async function run() {
       console.error(`❌ Error. ${err.message}`);
     }
 
-    console.log('\n', '-'.repeat(10), '\n');
+    console.log('\n' + '-'.repeat(10), '\n');
   }
 }
 
-run().then(() => console.log("Done."));
+await run().then(() => {
+  console.log("✅ PASS:", successes);
+  console.log("❌ FAIL:", failures);
+});
