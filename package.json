@@ -1,0 +1,30 @@
+{
+  "name": "api-test-app",
+  "version": "1.0.0",
+  "description": "A Node.js app to test APIs.",
+  "keywords": [
+    "javascript",
+    "design",
+    "patterns"
+  ],
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "format": "prettier --write . --log-level silent",
+    "prettier": "npm run format"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlanssie/api-test-app.git"
+  },
+  "author": "Jeremy Lanssiers",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jlanssie/api-test-app/issues"
+  },
+  "homepage": "https://github.com/jlanssie/api-test-app#readme"
+}

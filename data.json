@@ -1,0 +1,22 @@
+{
+  "template": {
+    "method": "GET",
+    "domain": "https://www.jeremylanssiers.com",
+    "segment": "/",
+    "queryParams": {
+      "key": "value"
+    },
+    "payload": {
+      "key": "value"
+    },
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "requests": [
+    {},
+    {
+      "segment": "/test"
+    }
+  ]
+}
